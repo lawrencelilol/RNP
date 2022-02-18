@@ -1,25 +1,25 @@
 
 .output{  
     background-color: #fdf2d0;
-    height: 100px;
-    width: 508.1px;
+    height: 2em;
+    width: 4em;
     border-width: 0.05px;
     border-style: solid;
     border-color: black;
     text-align:right;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
 }
 
 .greenOutput{
     background-color: #9fcd63;
-    height: 100px;
-    width: 508.1px;
+    height: 2em;
+    width: 4em;
     border-width: 0.05px;
     border-style: solid;
     border-color: black;
     text-align:right;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
 }
 
@@ -62,7 +62,6 @@ button:hover{
 .empty{
     color: transparent; 
     padding: 10px 11px;
-
     border: 1px solid transparent; 
     background-color: transparent;
     border-radius: 35%;
