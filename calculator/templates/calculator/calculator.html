@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/static/calculator/calculator.css">
+</head>
+
+<body>
+    <div id="output" {% if entering %} class="output" {% else %} class="greenOutput" {% endif %}>{{output}}</div>
+</br>
+    <form method = "POST" action="/">    
+    <div class="row">
+            <button value = "7" class ="digit" id = "key-7" name="button">7</button>
+            <button value = "8" class ="digit" id = "key-8" name="button">8</button>
+            <button value = "9" class ="digit" id = "key-9" name="button">9</button>
+            <button class ="operation" id = "key-plus" value = "plus"name="button" >&plus;</button>
+    </div>    
+
+    <div class="row">
+        <button  class ="digit" id = "key-4" name="button" value="4">4</button>
+        <button  class ="digit" id = "key-5" name="button" value="5">5</button>
+        <button  class ="digit" id = "key-6" name="button" value="6">6</button>
+        <button  class ="operation" id = "key-minus" value = "minus"name="button" >&minus;</button>
+    </div>
+
+    <div class="row">
+        <button  value = "1" class ="digit" id = "key-1" name="button">1</button>
+        <button  value = "2" class ="digit" id = "key-2" name="button">2</button>
+        <button  value = "3" class ="digit" id = "key-3" name="button">3</button>
+        <button  class ="operation" id = "key-times" value = "times"name="button">&times;</button>
+    </div>
+
+    <div class="row">
+        <button class="empty" >/</button>
+        <button value = "0" class ="digit" id = "key-0 " name="button">0</button>
+        <button class ="operation" id = "key-push" value = "push" name="button">&uarr;</button>
+        <button class ="operation" id = "key-divide" value = "divide" name="button">&divide;</button>
+    </div>
+
+    <input type="hidden" name="top" value="{{top}}">
+    <input type="hidden" name="middle" value="{{middle}}">
+    <input type="hidden" name="bottom" value="{{bottom}}">
+    <input type="hidden" name="entering" value="{{entering}}">
+    
+    {% csrf_token %}
+    </form>
+    
+</body>
+</html>
