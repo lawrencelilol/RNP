@@ -8,6 +8,8 @@
 <body>
     <div id="output" {% if entering %} class="output" {% else %} class="greenOutput" {% endif %}>{{output}}</div>
 </br>
+
+<div class="calculator">
     <form method = "POST" action="/">    
     <div class="row">
             <button value = "7" class ="digit" id = "key-7" name="button">7</button>
@@ -44,6 +46,7 @@
     
     {% csrf_token %}
     </form>
+</div>
     
 </body>
 </html>
